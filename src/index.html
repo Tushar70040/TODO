@@ -1,11 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+
+  <body>
+    <div id="body">
+      <div id="body1">
+        <div id="main1" class="main">
+          <div id="part1">
+            <div id="head">TASKDONE</div>
+            <div id="addbtn">
+              <button id="addpro">
+                <div id="aimg">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="26"
+                    height="26"
+                    fill="currentColor"
+                    class="bi bi-plus-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
+                    />
+                    <path
+                      d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
+                    />
+                  </svg>
+                </div>
+                ADD PROJECT
+              </button>
+            </div>
+            <button id="all">
+              <div id="alltask">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="26"
+                  height="26"
+                  fill="currentColor"
+                  class="bi bi-list-task"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5zM3 3H2v1h1z"
+                  />
+                  <path
+                    d="M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1z"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5zM2 7h1v1H2zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm1 .5H2v1h1z"
+                  />
+                </svg>
+              </div>
+              ALL TASK
+            </button>
+            <div id="showp">YOUR PROJECTS</div>
+          </div>
+          <div id="part2">
+            <div id="spro"></div>
+          </div>
+        </div>
+        <div id="main2" class="main">
+          <div id="headtodo">YOUR TODO'S</div>
+          <div id="btnhold">
+            <button id="todobtn">
+              <div id="todo">Task</div>
+              <div id="todoimg">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="35"
+                  fill="currentColor"
+                  class="bi bi-plus"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
+                  />
+                </svg>
+              </div>
+            </button>
+          </div>
+          <div id="container3">
+
+
+
+
+          
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <dialog id="dia">
+      <div id="container">
+        <form id="projectform">
+          <label for="project" class="title">Name</label><br />
+          <input
+            type="text"
+            placeholder="Enter the project name"
+            id="project"
+          /><br />
+          <div id="pbtn">
+            <button type="submit" id="submit" class="pb">Submit</button>
+            <button type="button" id="cancel" class="pb">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </dialog>
+
+    <dialog id="dialog2">
+      <form id="taskform">
+        <label class="todo">Title</label><br />
+        <input
+          type="text"
+          placeholder="Title"
+          id="ttile"
+          required
+          class="back"
+        /><br />
+
+        <label class="todo">Description</label><br />
+        <textarea
+          rows="4"
+          cols="50"
+          placeholder="Description"
+          id="textarea"
+          required
+        ></textarea
+        ><br />
+
+        <label class="todo">Due Date</label><br />
+        <input type="date" class="back" id="date" required /><br />
+
+        <label class="todo">Priority</label><br />
+        <select id="select" required>
+          <option>Low</option>
+          <option>Medium</option>
+          <option>High</option>
+        </select>
+
+        <div id="taskbtn">
+          <button type="submit" id="submit2" class="tb">Submit</button>
+          <button type="button" id="cancel2" class="tb">Cancel</button>
+        </div>
+      </form>
+    </dialog>
+  </body>
 </html>
