@@ -24,19 +24,19 @@ let defaulttask = [
   new todo(
     "Complete Project Report",
     "Finish writing the final project report and review it for submission.",
-    "20-04-2025",
+    "2005-04-20",
     "High"
   ),
   new todo(
     "Grocery Shopping",
     "Buy vegetables, fruits, and other essentials for the week.",
-    "25-01-25",
+    "2025-01-25",
     "Medium"
   ),
   new todo(
     "Read a Book",
     "Read at least 2 chapters of the current novel.",
-    "12-06-2025",
+    "2025-06-07",
     "Low"
   ),
 ];
@@ -52,11 +52,11 @@ export function display2(todo) {
   tasks.classList.add("tasks");
 
   if (todo.priority.toLowerCase() === "high") {
-    tasks.style.borderLeft = "5px solid red";
+    tasks.style.borderLeft = "7px solid red";
   } else if (todo.priority.toLowerCase() === "medium") {
-    tasks.style.borderLeft = "5px solid orange";
+    tasks.style.borderLeft = "7px solid orange";
   } else if (todo.priority.toLowerCase() === "low") {
-    tasks.style.borderLeft = "5px solid green";
+    tasks.style.borderLeft = "7px solid green";
   }
 
   let checkbox = document.createElement("input");
@@ -70,8 +70,13 @@ export function display2(todo) {
   let description = document.createElement("p");
   description.innerHTML = `<strong>Description:</strong> ${todo.description}`;
 
+  function date(duedate) {
+    let [year, month, day] = duedate.split("-");
+    return `${day}-${month}-${year}`; 
+  }
+
   let dueDate = document.createElement("p");
-  dueDate.innerHTML = `<strong>Due Date:</strong> ${todo.duedate}`;
+  dueDate.innerHTML = `<strong>Due Date:</strong> ${date(todo.duedate)}`;
 
   let priority = document.createElement("p");
   priority.innerHTML = `<strong>Priority:</strong> ${todo.priority}`;

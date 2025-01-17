@@ -302,6 +302,7 @@ input{
 }
 #textarea{
   border-radius: 5px;
+  padding: 10px;
   border: none;
   
 }
