@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "webpack serve --env development",
-  "build": "webpack --env production",
+    "start": "webpack serve --env development",
+    "build": "webpack --env production",
     "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "keywords": [],
